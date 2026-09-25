@@ -2,31 +2,31 @@
 
 I build backend and product systems where domain complexity, data consistency, API boundaries, and reliability decide whether the thing works.
 
-What I look for in a problem is a live trade-off: one where the answer has to be argued rather than looked up, and where getting it wrong has a cost you can name. I work in short increments, and write the reasoning down as the decisions are made rather than reconstructing it afterwards — which is why both projects below come with a decision log.
+What I look for in a problem is a live trade-off: one where the answer has to be argued rather than looked up, and where getting it wrong has a cost you can name. I work in short increments, and write the reasoning down as the decisions are made rather than reconstructing it afterwards. That is why both projects below come with a decision log.
 
 **Currently between roles**, and open to senior backend or platform work. The two things below are what I've been building publicly.
 
-### [Load-Bearing](https://github.com/mike-akdeniz/load-bearing) — a twenty-two chapter book about which software principles hold, and where they stop
+### [Load-Bearing](https://github.com/mike-akdeniz/load-bearing): a twenty-two chapter book about which software principles hold, and where they stop
 
-Most software advice is true. Almost none of it says what *kind* of claim it is — a law of computation, advice that is good only given certain conditions, or one ecosystem's local convention. They arrive in the same tone of voice, so conventions get applied with the force of laws.
+Most software advice is true. Almost none of it says what *kind* of claim it is: a law of computation, advice that is good only given certain conditions, or one ecosystem's local convention. They arrive in the same tone of voice, so conventions get applied with the force of laws.
 
-The book is a field guide for telling them apart. No chapter ships without a worked counter-example to its own claim, including the chapters about laws. It runs through concurrency and clocks, distributed impossibility results, queueing and Amdahl's law, design patterns, TDD, and abstraction — always with running code.
+The book is a field guide for telling them apart. No chapter ships without a worked counter-example to its own claim, including the chapters about laws. It runs through concurrency and clocks, distributed impossibility results, queueing and Amdahl's law, design patterns, TDD, and abstraction, always with running code.
 
-91,000 words, free to read — **[start with chapter one](https://github.com/mike-akdeniz/load-bearing/blob/main/01_load-bearing_w8kq.md)**.
+91,000 words, free to read. **[Start with chapter one](https://github.com/mike-akdeniz/load-bearing/blob/main/01_load-bearing_w8kq.md)**.
 
-**The ideas, the arguments and the examples are mine. The prose was drafted by an LLM and then edited and sent back, across 95 review passes I committed by hand — editing the text directly, or returning it with objections.**
+**The ideas, the arguments and the examples are mine. The prose was drafted by an LLM and then edited and sent back, across 95 review passes I committed by hand, editing the text directly or returning it with objections.**
 
 Those objections are on the record too. [`docs/DECISIONS.md`](https://github.com/mike-akdeniz/load-bearing/blob/main/docs/DECISIONS.md) holds 212 entries of what was decided and why, including the ones where the model's proposal was rejected outright.
 
-### [FlowCore](https://github.com/mike-akdeniz/flowcore) — a workflow library for Go
+### [FlowCore](https://github.com/mike-akdeniz/flowcore): a workflow library for Go
 
-Subject-agnostic workflows over Postgres, designed for approval chains with AI review steps: an agent is an opaque assignee like any other, which is why an agentic step needs no new mechanism. A library plus schema and migrations, not a service. It records opaque references — subject, assignee, completer — and never interprets them, so identity and authorization stay in the client.
+Subject-agnostic workflows over Postgres, designed for approval chains with AI review steps: an agent is an opaque assignee like any other, which is why an agentic step needs no new mechanism. A library plus schema and migrations, not a service. It records opaque references (subject, assignee, completer) and never interprets them, so identity and authorization stay in the client.
 
-My production backend work has been C# and .NET. FlowCore is where I've been building in Go in earnest: a real schema, migrations, and a test suite that runs against Postgres 13 and 17, with the 38 design decisions behind it written down as they were made — **[the code](https://github.com/mike-akdeniz/flowcore)**.
+My production backend work has been C# and .NET. FlowCore is where I've been building in Go in earnest: a real schema, migrations, and a test suite that runs against Postgres 13 and 17, with the 38 design decisions behind it written down as they were made. **[The code](https://github.com/mike-akdeniz/flowcore)**.
 
 ### What keeps recurring
 
-FlowCore is the third configurable approval-workflow engine I've built, in the third stack: first over an ERP on SQL Server, then serverless on Lambda and DynamoDB — with workflow instances copied from configuration at start time, so changing a config could not rewrite an approval already in flight — and now in Go. The code was thrown away each time; the capability wasn't. The book came out of asking which of those choices were forced, which were conventional, and which were only habit.
+FlowCore is the third configurable approval-workflow engine I've built, in the third stack: first over an ERP on SQL Server, then serverless on Lambda and DynamoDB, with workflow instances copied from configuration at start time so that changing a config could not rewrite an approval already in flight, and now in Go. The code was thrown away each time; the capability wasn't. The book came out of asking which of those choices were forced, which were conventional, and which were only habit.
 
 Go, C#/.NET, SQL (Postgres and SQL Server), AWS serverless, Angular/TypeScript.
 
