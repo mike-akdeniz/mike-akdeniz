@@ -4,7 +4,7 @@ I build backend and product systems where domain complexity, data consistency, A
 
 What I look for in a problem is a live trade-off: one where the answer has to be argued rather than looked up, and where getting it wrong has a cost you can name. I work in short increments, and write the reasoning down as the decisions are made rather than reconstructing it afterwards. That is why both projects below come with a decision log.
 
-**Currently between roles**, and open to senior backend or platform work. The two things below are what I've been building publicly.
+The two things below are what I've been building publicly.
 
 ### [Load-Bearing](https://github.com/mike-akdeniz/load-bearing): a twenty-two chapter book about which software principles hold, and where they stop
 
@@ -20,9 +20,11 @@ Those objections are on the record too. [`docs/DECISIONS.md`](https://github.com
 
 ### [FlowCore](https://github.com/mike-akdeniz/flowcore): a workflow library for Go
 
-Subject-agnostic workflows over Postgres, designed for approval chains with AI review steps: an agent is an opaque assignee like any other, which is why an agentic step needs no new mechanism. A library plus schema and migrations, not a service. It records opaque references (subject, assignee, completer) and never interprets them, so identity and authorization stay in the client.
+Subject-agnostic workflows over Postgres, in which both people and AI make decisions. An assignee is an opaque reference the client dispatches itself, so an AI step needs no new mechanism. A library plus schema and migrations, not a service. It records opaque references (subject, assignee, completer) and never interprets them, so identity and authorization stay in the client.
 
-My production backend work has been C# and .NET. FlowCore is where I've been building in Go in earnest: a real schema, migrations, and a test suite that runs against Postgres 13 and 17, with the 38 design decisions behind it written down as they were made. **[The code](https://github.com/mike-akdeniz/flowcore)**.
+**[CaseWork](https://casework.happensbefore.com)** is the live demo built on it: an insurer's console where claims and policy applications move through configurable workflows, some steps decided by people and some by AI, each with a record of who decided and why. No account needed.
+
+My production backend work has been C# and .NET. FlowCore is where I've been building in Go in earnest: a real schema, migrations, a test suite that runs against Postgres 17, and the 50 design decisions behind the library written down as they were made. **[The code](https://github.com/mike-akdeniz/flowcore)**.
 
 ### What keeps recurring
 
