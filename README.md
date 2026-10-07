@@ -12,11 +12,11 @@ Most software advice is true. Almost none of it says what *kind* of claim it is:
 
 The book is a field guide for telling them apart. No chapter ships without a worked counter-example to its own claim, including the chapters about laws. It runs through concurrency and clocks, distributed impossibility results, queueing and Amdahl's law, design patterns, TDD, and abstraction, always with running code.
 
-91,000 words, free to read. **[Start with chapter one](https://github.com/mike-akdeniz/load-bearing/blob/main/01_load-bearing_w8kq.md)**.
+About 90,000 words. **[Start with chapter one](https://github.com/mike-akdeniz/load-bearing/blob/main/01_load-bearing_w8kq.md)**.
 
 **The ideas, the arguments and the examples are mine. The prose was drafted by an LLM and then edited and sent back, across 95 review passes I committed by hand, editing the text directly or returning it with objections.**
 
-Those objections are on the record too. [`docs/DECISIONS.md`](https://github.com/mike-akdeniz/load-bearing/blob/main/docs/DECISIONS.md) holds 212 entries of what was decided and why, including the ones where the model's proposal was rejected outright.
+Those objections are on the record too. [`docs/DECISIONS.md`](https://github.com/mike-akdeniz/load-bearing/blob/main/docs/DECISIONS.md) holds hundreds of entries of what was decided and why, including the ones where the model's proposal was rejected outright.
 
 ### [FlowCore](https://github.com/mike-akdeniz/flowcore): a workflow library for Go
 
